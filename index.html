@@ -33,8 +33,11 @@
             </div>
         </section>
 
-        <button onclick="sortear()" class="button-sortear">Sortear</button>
-    
+        <div class="button-loading"> <!--container adicionado para gerar animação loading-->
+            <button onclick="sortear()" class="button-sortear">Sortear</button>
+            <div id="loading" class="loading hidden"></div> <!-- Animação loading -->
+        </div>
+        
         <div class="container-result">
             <h2>Resultado:</h2>
             <input id="result" type="number" name="number">

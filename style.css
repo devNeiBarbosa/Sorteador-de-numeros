@@ -77,14 +77,21 @@ input[type=number] {
    appearance: textfield;
 }
 
+/* container adicionado para gerar animação loading */
+.button-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .button-sortear {
     width: 150px;
     height: 50px;
     background-color: #d10000;
-    margin-top: 50px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
+    margin: 40px 15px 0 15px;
     font-size: 20px;
     font-weight: 500;
     line-height: 18px;
@@ -99,6 +106,33 @@ input[type=number] {
 .button-sortear:active {
     font-size: 16px;
     background-color: rgba(255, 99, 99, 0.7);
+}
+
+/* Estilo de animação de loading */
+.loading {
+    border: 5px solid #f3f3f3; /* Cor de fundo do círculo */
+    border-top: 5px solid #d10000; /* Cor do indicador de carregamento */
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    margin-top: 40px;
+    position: fixed;
+    top: 450px;
+    left: 730px;
+}
+
+/* Animação de rotação */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Oculta o elemento */
+.hidden {
+    display: none;
 }
 
 .container-result {

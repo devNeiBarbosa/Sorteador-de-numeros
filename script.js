@@ -12,9 +12,19 @@ function sortear() {
     const min = Math.ceil(document.querySelector("#input-min").value)
     const max = Math.floor(document.querySelector("#input-max").value)
 
-    const result = Math.floor(Math.random() * (max - min + 1)) + min;
+    // Exibe o loading
+    document.getElementById("loading").classList.remove("hidden");
 
-    
+    setTimeout(() => {
+        //Calcula o número sorteado
+        const result = Math.floor(Math.random() * (max - min + 1)) + min;
 
-    const inputResult = document.querySelector("#result").value = result
+        // Oculta o loading
+        document.getElementById("loading").classList.add("hidden");
+
+        // Exibe o resultado
+        document.querySelector("#result").value = result;
+    }, 500); //500ms = 0.5 segundos de atraso
+
+
 }
