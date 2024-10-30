@@ -5,14 +5,16 @@ const buttonSortear = document.getElementById("button-sortear");
     /*A função validateInputs é usada para verificar se os valores inseridos nos campos "min" e "max" 
     são válidos antes de habilitar o botão "Sortear".*/
       function validateInputs() {
+        /*parseInt é útil para garantir que os valores de entrada (min e max) sejam tratados como 
+        números inteiros, o que ajuda a evitar problemas de tipo durante os cálculos e comparações.*/
           const min = parseInt(minInput.value);
           const max = parseInt(maxInput.value);
+
           // Habilita o botão se min for menor que max e ambos estiverem preenchidos
           buttonSortear.disabled = isNaN(min) || isNaN(max) || min >= max;
-
           /* No caso do meu código, isNaN(min) || isNaN(max) verifica se os valores inseridos nos campos min e max 
-          não são números (ou seja, se os campos estão vazios ou se o Max é menor que o Min ), evitando que o botão 
-          seja habilitado se as entradas não forem válidas. */
+          não são números (ou seja, se os campos estão vazios, contêm texto ou se o Max é menor ou igual ao Min), 
+          evitando que o botão seja habilitado se as entradas não forem válidas. */
       }
 
 //addEventListener = Evento de observação dos inputs, se os mesmos são validos ou não.
