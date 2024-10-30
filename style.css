@@ -1,0 +1,125 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    color: white;
+}
+
+.background img {
+    min-width: 100%;
+    min-height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.mascara-background {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-header img {
+    width: 400px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.container-header h1 {
+    text-align: center;
+    font-size: 70px;
+    margin-top: -20px;
+    margin-bottom: 50px;
+}
+
+.header p {
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.container-inputs input {
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    margin: auto 10px;
+    outline: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Para remover as setas de seleção nos navegadores Webkit (Chrome, Safari) */
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none; 
+}
+/* Para Firefox */
+input[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+}
+
+.button-sortear {
+    width: 150px;
+    height: 50px;
+    background-color: #d10000;
+    margin-top: 50px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 18px;
+    filter: drop-shadow(0px 3px 5px rgba(255, 0, 0, 0.7));
+}
+
+.button-sortear:hover {
+    font-size: 24px;
+    transition: 0.3s ease-in-out;
+}
+
+.button-sortear:active {
+    font-size: 16px;
+    background-color: rgba(255, 99, 99, 0.7);
+}
+
+.container-result {
+    align-items: center;
+    padding: 20px;
+}
+
+.container-result h2 {
+    font-size: 30px;
+    text-align: center;
+}
+
+.container-result input {
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    margin: auto 10px;
+    outline: none;
+    color: black;
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+}
