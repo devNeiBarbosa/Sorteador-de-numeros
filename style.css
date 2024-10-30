@@ -98,6 +98,11 @@ input[type=number] {
     filter: drop-shadow(0px 3px 5px rgba(255, 0, 0, 0.7));
 }
 
+.button-sortear:disabled {
+    cursor: not-allowed; /* Cursor de bloqueio quando o botão está desabilitado */
+    background-color: #940000;
+  }
+
 .button-sortear:hover {
     font-size: 24px;
     transition: 0.3s ease-in-out;
